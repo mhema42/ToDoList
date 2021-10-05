@@ -1,5 +1,37 @@
+Body {
+  margin-left: 150px;
+  color: rgb(252, 252, 252);
+  background-color: #593800;
+  background-image: url("https://www.transparenttextures.com/patterns/wood-pattern.png");
+  padding: 40px;
+  font-family: "Arial", Times, serif;
+  
+}
 h1 {
-  color: blue;
+  padding-top: 36px;
+  padding-bottom: 12px;
+  color: rgb(20, 6, 145);
+  }
+
+/* .space */ 
+
+.toDolist {  
+  width: 337px;
+  height: 500px; 
+  padding: 17px;
+  background-image: url("notepad.png");
+  opacity: 0.95;
+  box-shadow: 10px 20px 20px black;
+
+  font-family: "Lucida Handwriting", "Papyrus", "Brush Script MT", "Arial";
+  line-height: 33.4px;
+  color: rgb(20, 6, 145);
+ 
+}
+
+ul {
+  list-style: none;
+  font-size: 20px;
 }
 
 .completed {
@@ -8,7 +40,7 @@ h1 {
 }
 
 .trashcan {
-  font-size: 10px;
+  font-size: 16px;
   margin-left: 10px;
   cursor: pointer;
 }
