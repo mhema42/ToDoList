@@ -16,6 +16,7 @@ h1 {
 /* .space */ 
 
 .toDolist {  
+  text-align: center;
   width: 337px;
   height: 500px; 
   padding: 17px;
@@ -30,6 +31,7 @@ h1 {
 }
 
 ul {
+  padding-left: 0px;
   list-style: none;
   font-size: 20px;
 }
