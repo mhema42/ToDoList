@@ -3,16 +3,14 @@ let completed = 0;
 let index = 0;
 let toDo = [];
 
-
 // HTML - element
 const input = document.querySelector("input");
 const button = document.querySelector("button");
 const list = document.querySelector("ul");
-const uppgifter = document.querySelector("p");
+const uppgifter = document.querySelector(".toDos");
 const trashcan = document.querySelector("span");
 
-
-uppgifter.innerText = completed + " slutförd";
+uppgifter.innerText = index + " uppgifter " + completed + " slutförd";
 
 // Knapp för att lägga till uppgifter
 button.addEventListener("click", function () {
@@ -20,12 +18,15 @@ button.addEventListener("click", function () {
   const text = input.value;
 
   // indexräknare för objekt i array
-  index++
+  index++;
+  uppgifter.innerText = index + " uppgifter " + completed + " slutförd";
 
   // kotrollera att textrutan inte är tom när vi klickar
   if (text.length == 0) {
     document.querySelector("small").innerText =
       "du måste fylla i något att göra";
+    index--;
+    uppgifter.innerText = index + " uppgifter " + completed + " slutförd";
     return;
   } else {
     document.querySelector("small").innerText = "";
@@ -43,7 +44,7 @@ button.addEventListener("click", function () {
   input.value = "";
 
   // pusha text från inmatning plus index till en array
-  toDo.push({text, index});
+  toDo.push({ text, index });
 
   // lägg till en trashcan efter varje item
   const trashcan = document.createElement("span");
@@ -62,13 +63,13 @@ button.addEventListener("click", function () {
       completed++;
     }
 
-  //uppdaterar räknaren med antal slutförda uppgifter
-  uppgifter.innerText = completed + " slutförd";
-
+    //uppdaterar räknaren med antal slutförda uppgifter
+    uppgifter.innerText = index + " uppgifter " + completed + " slutförd";
   });
 
   // om man raderar en uppgift
   trashcan.addEventListener("click", function () {
+    index--;
     // testa om uppgiften är utförd eller ej
     if (item.getAttribute("class") == "completed") {
       completed--;
@@ -77,18 +78,10 @@ button.addEventListener("click", function () {
       item.remove();
     }
 
-  //uppdaterar räknaren med antal slutförda uppgifter
-  uppgifter.innerText = completed + " slutförd";
+    //uppdaterar räknaren med antal slutförda uppgifter
+    uppgifter.innerText = index + " uppgifter " + completed + " slutförd";
 
-  // raderar det sista objektet i arrayen
-  toDo.pop({text, index});
-
+    // raderar det sista objektet i arrayen
+    toDo.pop({ text, index });
   });
- 
 });
-
-
-
-
-
-
