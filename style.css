@@ -1,10 +1,11 @@
 Body {
-  margin-left: 10px;
-  color: rgb(252, 252, 252);
+  margin: auto;
   background-color: #593800;
   background-image: url("https://www.transparenttextures.com/patterns/wood-pattern.png");
   padding: 40px;
   font-family: "Arial", Times, serif;
+  text-align: center;
+  color: rgb(252, 252, 252);
   
 }
 h1 {
@@ -16,10 +17,13 @@ h1 {
 /* .space */ 
 
 .toDolist {  
-  width: 337px;
+  max-width: 337px;
   height: 500px; 
+  margin: auto;
   padding: 17px;
-  background-image: url("notepad.png");
+  background-image: url("notepad.png"); 
+  background-repeat: repeat-y;
+  
   opacity: 0.95;
   box-shadow: 10px 20px 20px black;
 
