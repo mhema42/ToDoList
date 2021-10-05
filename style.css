@@ -39,6 +39,10 @@ ul {
   font-size: 20px;
 }
 
+li:hover {
+  text-shadow: 1px 1px 2px gray;
+}
+
 .completed {
   text-decoration: line-through;
   color: #888;
@@ -48,4 +52,11 @@ ul {
   font-size: 16px;
   margin-left: 10px;
   cursor: pointer;
+  color: gray
+}
+
+.trashcan:hover {
+  text-shadow: 0px 0px 0px white;
+  font-size: 25px;
+  color: red
 }
